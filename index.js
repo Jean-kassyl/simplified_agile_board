@@ -14,7 +14,17 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 
 app.get('/', (req, res) => {
-    res.render('home', {title: "home page"});
+    res.render('home', {title: "home page", company_name: "Agile Board"});
+})
+
+app.get('/register', (req, res) => {
+    res.render('company_register', {title: "register", company_name: "Agile Board"});
+})
+
+app.post('/register', function(req, res){
+    const bod = req.body;
+    console.log(bod);
+    res.redirect('/register')
 })
 
 

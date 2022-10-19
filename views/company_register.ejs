@@ -1,0 +1,90 @@
+<%- include('partials/header') -%>
+
+<main class="register_main">
+    <form action="" method="POST">
+        <div class="comp_info">
+            <div class="input_div">
+                <label>
+                    Your company name
+                </label>
+                <input type="text" name="company" autocomplete="off">
+            </div>
+            <div class="input_div">
+                <label>
+                    Your Pseudo
+                </label>
+                <input type="text" name="adminName" autocomplete="off">
+            </div>
+            <div class="input_div">
+                <label>
+                    Your password
+                </label>
+                <input type="password" name="adminPassword" autocomplete="off">
+            </div>
+            <div class="input_div">
+                <label>
+                    Your Role in the company
+                </label>
+                <input type="text" name="adminRole" autocomplete="off">
+            </div>
+        </div>
+       
+        <div class="team">
+            <h3>Define your team</h3>
+            <div class="input_div">
+                <label>
+                    Your team name
+                </label>
+                <input type="text" name="teamName" autocomplete="off">
+            </div>
+
+            <h3>Your team member</h3>
+            <div class="team-members">
+                <div class="input_div">
+                    <label>
+                        collaborator name or pseudo
+                    </label>
+                    <input type="text" name="collabName" autocomplete="off">
+                </div>
+
+                <div class="input_div">
+                    <label>
+                        collaborator name or pseudo
+                    </label>
+                    <input type="text" name="collabName" autocomplete="off">
+                </div>
+                
+            </div>
+            <span id="add-member">Add new member</span>
+        </div>
+
+        <div>
+            <button class="btn submit">
+                Submit
+            </button>
+        </div>
+    </form>
+</main>
+    
+<script>
+    const teamMembers = document.querySelector('.team-members');
+    const addMember = document.getElementById('add-member');
+
+    addMember.onclick = function(e){
+        const div = document.createElement('div');
+        div.setAttribute('class', 'input_div');
+
+        div.innerHTML = `
+                     <label>
+                        collaborator name or pseudo
+                    </label>
+                    <input type="text" name="collabName" autocomplete="off">
+        `;
+
+        teamMembers.appendChild(div);
+    }
+    
+</script>
+
+
+<%-  include('partials/footer') -%>

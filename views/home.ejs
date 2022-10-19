@@ -1,7 +1,26 @@
 <%- include('partials/header') -%>
 
-<main>
-    <h1 class="text-slate-800">Welcome on this amazing application</h1>
+<main class="home_main">
+    <h1 class="text-blue-800">Welcome on this amazing <%= company_name%> application</h1>
+    <p style="text-align: center;">
+        Make some work done with your team and have a good time making it <br />
+
+        <span style="color: #232323; font-size: 1.1rem;">So ready?</span> hit the register button to create a private environment for you and your team or login 
+        if you already have set up one
+    </p>
+    <div>
+        <a href="/login">
+            <button class="btn login home_login">
+                Login 
+            </button>
+        </a>
+
+        <a href="/register">
+            <button class="btn register home_register">
+                Register
+            </button>
+        </a>
+    </div>
 </main>
     
 
